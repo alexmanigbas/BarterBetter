@@ -534,8 +534,8 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 .header-logo { margin-bottom: auto; }
 
 .header-logo img { 
-      width: 400px;
-      height: 300px;
+      width: 200px;
+      height: 75px;
       margin: 10px; }
 
 .header-search-container { position: auto; }
