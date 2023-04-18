@@ -23,5 +23,4 @@
     else {
         die("Error". mysqli_connect_error()); 
     }
-// http://localhost/amit.php this will not be included in the file
 ?>

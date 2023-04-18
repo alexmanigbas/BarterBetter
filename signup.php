@@ -10,8 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database Connection.
     include 'dbconnect.php';   
     
-    $username = $_POST["username"];
-    $email = $_POST["email"]; 
+    $username = $_POST["username"]; 
     $password = $_POST["password"]; 
     $cpassword = $_POST["cpassword"];
             
@@ -32,9 +31,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                                 PASSWORD_DEFAULT);
                 
             // Password Hashing is used here. 
-            $sql = "INSERT INTO `users` ( `username`,`email` 
-                `password`, `date`) VALUES ('$username','$email', 
-                '$hash', current_timestamp())";
+            $sql = "INSERT INTO user ( username, email 
+                password_hash) VALUES ('$username', 
+                '$password', $cpassword)";
     
             $result = mysqli_query($conn, $sql);
     
@@ -123,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     
 <div class="container my-4 ">
     
-    <h1 class="text-center">Create Account</h1> 
+    <h1 class="text-center">Signup Here</h1> 
     <form action="signup.php" method="post">
     
         <div class="form-group"> 
@@ -131,13 +130,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="text" class="form-control" id="username"
             name="username" aria-describedby="emailHelp">    
         </div>
-
-        <div class="form-group"> 
-            <label for="email">Email</label> 
-            <input type="email" class="form-control"
-            id="email" name="email"> 
-        </div>
-
+    
         <div class="form-group"> 
             <label for="password">Password</label> 
             <input type="password" class="form-control"
