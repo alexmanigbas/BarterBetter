@@ -28,17 +28,27 @@ $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 $mysqli = require __DIR__ . "/database.php";
 
-$sql = "INSERT INTO user (id, name, email, password_hash)
-        VALUES (NULL, ?, ?, ?)";
+$sql = "INSERT INTO user (name, email, password_hash)
+        VALUES (?, ?, ?)";
 /* create a prepared statement */
 $stmt = $mysqli->stmt_init();
 
 if ( ! $stmt->prepare($sql)) {
     die("SQL Error: " . $mysqli->error);
 };
+$stmt->bind_param("sss",
+                  $_POST["name"],
+                  $_POST["email"],
+                  $password_hash);
 
-$stmt->bind_param("sss",$_POST["name"],$_POST["email"],$password_hash);
+if($stmt->execute()) {
 
-if(!$stmt->execute()) echo $stmt->error;
-
-echo "signup successful"; 
+    header("Location: signup-success.html");
+    exit;
+    
+} else{
+    if ($mysqli->errno == 1062) {
+        die("email already taken");
+    }
+    die($mysqli->error . " " . $mysqli->errno);
+}
