@@ -39,23 +39,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Signup</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="./src/main.css">
 </head>
 <body>
-    
+    <div class="container">
     <h1>Login</h1>
 
     <?php if ($is_invalid): ?>
         <em>Invalid Login </em>
     <?php endif; ?>
 
-    <form method="post">
+    <form class="form" method="post">
         <label for="email">email</label>
-        <input type="email" name="email" id ="email"
+        <input type="email" class="form__input" name="email" id ="email"
                 value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
 
         <label for="password">password</label>
-        <input type="password" name="password" id ="password">
-
+        <input type="password" class="form__input"  name="password" id ="password">
+        <p class="form__text">
+                <a href="#" class="form__link">Forgot your password?</a>
+            </p>
+            <p class="form__text">
+                <a class="form__link" href="signup.html" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
         <button>Log in</button>
 
     </form>

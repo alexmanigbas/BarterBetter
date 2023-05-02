@@ -48,51 +48,6 @@ if (isset($_SESSION["user_id"])) {
 
 
   <div class="overlay" data-overlay></div>
-
-  <!--
-    - MODAL
-  -->
-
-  <div class="modal" data-modal>
-
-    <div class="modal-close-overlay" data-modal-overlay></div>
-
-    <div class="modal-content">
-
-      <button class="modal-close-btn" data-modal-close>
-        <ion-icon name="close-outline"></ion-icon>
-      </button>
-
-      <div class="newsletter-img">
-        <img src="./assets/images/newsletter.png" alt="subscribe newsletter" width="400" height="400">
-      </div>
-
-      <div class="newsletter">
-
-        <form action="#">
-
-          <div class="newsletter-header">
-
-            <h3 class="newsletter-title">Subscribe Newsletter.</h3>
-
-            <p class="newsletter-desc">
-              Subscribe to the <b>BarterBetter</b> newsletter to get latest products update.
-            </p>
-
-          </div>
-
-          <input type="email" name="email" class="email-field" placeholder="Email Address" required>
-
-          <button type="submit" class="btn-newsletter">Subscribe</button>
-
-        </form>
-
-      </div>
-
-    </div>
-
-  </div>
-
   <!--
     - NOTIFICATION TOAST
   -->
@@ -124,6 +79,10 @@ if (isset($_SESSION["user_id"])) {
     </div>
 
   </div>
+
+
+
+
 
   <!--
     - HEADER
@@ -194,43 +153,42 @@ if (isset($_SESSION["user_id"])) {
     </div>
 
     <div class="header-main">
-    
-     
-    <div class="container">
 
-<a href="#" class="header-logo">
-  <img src="./assets/images/logo/barterbetter.jpeg" alt="BarterBetters's logo" width="140" height="70">
-</a>
+      <div class="container">
 
-<div class="header-search-container">
+        <a href="#" class="header-logo">
+          <img src="./assets/images/logo/barterbetter.jpeg" alt="BarterBetters's logo" width="140" height="70">
+        </a>
 
-  <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+        <div class="header-search-container">
 
-</div>
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
 
-<div class="header-user-actions">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
 
-  <button class="search-btn">
-    <ion-icon name="search-outline"></ion-icon>
-  </button>
+        </div>
 
-  <button class="action-btn">
-    <ion-icon name="person-outline"></ion-icon>
-  </button>
+        <div class="header-user-actions">
 
-  <button class="action-btn">
-    <ion-icon name="heart-outline"></ion-icon>
-    <span class="count">0</span>
-  </button>
+          <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
 
-  <button class="action-btn">
-    <ion-icon name="bag-handle-outline"></ion-icon>
-    <span class="count">0</span>
-  </button>
-  <div>
-    <form action="signup.html" method="post" novalidate>
-      <button class="banner-btn"> Sign up </button>
-    </form>
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+          <div>
+            <form action="logout.php" method="post" novalidate>
+              <button class="banner-btn"> log out </button>
+            </form>
           </div>
         </div>
 
@@ -491,10 +449,6 @@ if (isset($_SESSION["user_id"])) {
 
           <li class="menu-category">
             <a href="#" class="menu-title">Blog</a>
-          </li>
-
-          <li class="menu-category">
-            <a href="#" class="menu-title">Hot Offers</a>
           </li>
 
         </ul>
@@ -798,15 +752,15 @@ if (isset($_SESSION["user_id"])) {
 
             <div class="banner-content">
 
-              <p class="banner-subtitle">Trending item</p>
+              <p class="banner-subtitle">Take Action</p>
 
-              <h2 class="banner-title">Women's latest fashion sale</h2>
+              <h2 class="banner-title">Every trade makes a difference.</h2>
 
               <p class="banner-text">
-                starting at &dollar; <b>20</b>.00
+                start bartering!
               </p>
 
-              <a href="#" class="banner-btn">Shop now</a>
+              <a href="listing.html" class="banner-btn">Barter now</a>
 
             </div>
 
@@ -818,15 +772,15 @@ if (isset($_SESSION["user_id"])) {
 
             <div class="banner-content">
 
-              <p class="banner-subtitle">Trending accessories</p>
+              <p class="banner-subtitle">Join the Green Revolution</p>
 
-              <h2 class="banner-title">Modern sunglasses</h2>
+              <h2 class="banner-title">Make everyday Earth Day</h2>
 
               <p class="banner-text">
-                starting at &dollar; <b>15</b>.00
+                choose sustainability for a brighter future!
               </p>
 
-              <a href="#" class="banner-btn">Shop now</a>
+              <a href="signup.html" class="banner-btn">Barter now</a>
 
             </div>
 
@@ -838,15 +792,15 @@ if (isset($_SESSION["user_id"])) {
 
             <div class="banner-content">
 
-              <p class="banner-subtitle">Sale Offer</p>
+              <p class="banner-subtitle1">Take a step towards a greener world</p>
 
-              <h2 class="banner-title">New fashion summer sale</h2>
+              <h2 class="banner-title1">embrace sustainability</h2>
 
-              <p class="banner-text">
-                starting at &dollar; <b>29</b>.99
+              <p class="banner-text1">
+                be the change!
               </p>
 
-              <a href="#" class="banner-btn">Shop now</a>
+              <a href="signup.html" class="banner-btn">Barter now</a>
 
             </div>
 
@@ -1415,137 +1369,6 @@ if (isset($_SESSION["user_id"])) {
 
           </div>
 
-          <div class="product-showcase">
-
-            <h3 class="showcase-heading">best sellers</h3>
-
-            <div class="showcase-wrapper">
-
-              <div class="showcase-container">
-
-                <div class="showcase">
-
-                  <a href="#" class="showcase-img-box">
-                    <img src="./assets/images/products/1.jpg" alt="baby fabric shoes" width="75" height="75"
-                      class="showcase-img">
-                  </a>
-
-                  <div class="showcase-content">
-
-                    <a href="#">
-                      <h4 class="showcase-title">baby fabric shoes</h4>
-                    </a>
-
-                    <div class="showcase-rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <div class="price-box">
-                      <del>$5.00</del>
-                      <p class="price">$4.00</p>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div class="showcase">
-
-                  <a href="#" class="showcase-img-box">
-                    <img src="./assets/images/products/2.jpg" alt="men's hoodies t-shirt" class="showcase-img"
-                      width="75" height="75">
-                  </a>
-
-                  <div class="showcase-content">
-
-                    <a href="#">
-                      <h4 class="showcase-title">men's hoodies t-shirt</h4>
-                    </a>
-                    <div class="showcase-rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star-half-outline"></ion-icon>
-                    </div>
-
-                    <div class="price-box">
-                      <del>$17.00</del>
-                      <p class="price">$7.00</p>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div class="showcase">
-
-                  <a href="#" class="showcase-img-box">
-                    <img src="./assets/images/products/3.jpg" alt="girls t-shirt" class="showcase-img" width="75"
-                      height="75">
-                  </a>
-
-                  <div class="showcase-content">
-
-                    <a href="#">
-                      <h4 class="showcase-title">girls t-shirt</h4>
-                    </a>
-                    <div class="showcase-rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star-half-outline"></ion-icon>
-                    </div>
-
-                    <div class="price-box">
-                      <del>$5.00</del>
-                      <p class="price">$3.00</p>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div class="showcase">
-
-                  <a href="#" class="showcase-img-box">
-                    <img src="./assets/images/products/4.jpg" alt="woolen hat for men" class="showcase-img" width="75"
-                      height="75">
-                  </a>
-
-                  <div class="showcase-content">
-
-                    <a href="#">
-                      <h4 class="showcase-title">woolen hat for men</h4>
-                    </a>
-                    <div class="showcase-rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <div class="price-box">
-                      <del>$15.00</del>
-                      <p class="price">$12.00</p>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
         </div>
 
 
@@ -1581,7 +1404,7 @@ if (isset($_SESSION["user_id"])) {
                       <a href="#" class="showcase-category">Clothes</a>
 
                       <div class="price-box">
-                        <p class="price">$45.00</p>
+                        <p class="price">Levi Jeans?</p>
                         <del>$12.00</del>
                       </div>
 
@@ -1604,7 +1427,7 @@ if (isset($_SESSION["user_id"])) {
                       <a href="#" class="showcase-category">Clothes</a>
                   
                       <div class="price-box">
-                        <p class="price">$61.00</p>
+                        <p class="price">Socks?</p>
                         <del>$9.00</del>
                       </div>
                   
@@ -1628,7 +1451,7 @@ if (isset($_SESSION["user_id"])) {
                       <a href="#" class="showcase-category">Clothes</a>
                   
                       <div class="price-box">
-                        <p class="price">$76.00</p>
+                        <p class="price">Sweater?</p>
                         <del>$25.00</del>
                       </div>
                   
@@ -1652,7 +1475,7 @@ if (isset($_SESSION["user_id"])) {
                       <a href="#" class="showcase-category">Mens Fashion</a>
                   
                       <div class="price-box">
-                        <p class="price">$68.00</p>
+                        <p class="price">Fleece?</p>
                         <del>$31.00</del>
                       </div>
                   
@@ -1790,7 +1613,7 @@ if (isset($_SESSION["user_id"])) {
                       <a href="#" class="showcase-category">Sports</a>
             
                       <div class="price-box">
-                        <p class="price">$49.00</p>
+                        <p class="price">Adidas shoes?</p>
                         <del>$15.00</del>
                       </div>
             
@@ -1814,7 +1637,7 @@ if (isset($_SESSION["user_id"])) {
                       <a href="#" class="showcase-category">Sports</a>
             
                       <div class="price-box">
-                        <p class="price">$78.00</p>
+                        <p class="price">Peleton Cycling Shoes?</p>
                         <del>$36.00</del>
                       </div>
             
@@ -1838,8 +1661,8 @@ if (isset($_SESSION["user_id"])) {
                       <a href="#" class="showcase-category">Party wear</a>
             
                       <div class="price-box">
-                        <p class="price">$94.00</p>
-                        <del>$42.00</del>
+                        <p class="price">Red Bottoms?</p>
+                        <del>$4,500</del>
                       </div>
             
                     </div>
@@ -1862,7 +1685,7 @@ if (isset($_SESSION["user_id"])) {
                       <a href="#" class="showcase-category">Sports</a>
             
                       <div class="price-box">
-                        <p class="price">$54.00</p>
+                        <p class="price">Brooks Running Shoes?</p>
                         <del>$65.00</del>
                       </div>
             
@@ -1976,7 +1799,7 @@ if (isset($_SESSION["user_id"])) {
 
             <div class="product-showcase">
             
-              <h2 class="title">Top Rated</h2>
+              <h2 class="title">Top Rated Traders</h2>
             
               <div class="showcase-wrapper  has-scrollbar">
             
@@ -1998,8 +1821,8 @@ if (isset($_SESSION["user_id"])) {
                       <a href="#" class="showcase-category">Watches</a>
             
                       <div class="price-box">
-                        <p class="price">$50.00</p>
-                        <del>$34.00</del>
+                        <p class="price">Daytona Rolex?</p>
+                        <del>$8,000</del>
                       </div>
             
                     </div>
@@ -2022,8 +1845,8 @@ if (isset($_SESSION["user_id"])) {
                       <a href="#" class="showcase-category">Jewellery</a>
             
                       <div class="price-box">
-                        <p class="price">$84.00</p>
-                        <del>$30.00</del>
+                        <p class="price">Engangement Ring?</p>
+                        <del>$30,000.00</del>
                       </div>
             
                     </div>
@@ -2046,8 +1869,8 @@ if (isset($_SESSION["user_id"])) {
                       <a href="#" class="showcase-category">Perfume</a>
             
                       <div class="price-box">
-                        <p class="price">$42.00</p>
-                        <del>$10.00</del>
+                        <p class="price">Tom Ford Tobacco Vanille?</p>
+                        <del>$130.00</del>
                       </div>
             
                     </div>
@@ -2064,14 +1887,14 @@ if (isset($_SESSION["user_id"])) {
                     <div class="showcase-content">
             
                       <a href="#">
-                        <h4 class="showcase-title">Men's Leather Reversible Belt</h4>
+                        <h4 class="showcase-title">Men's Vintage Leather Reversible Belt</h4>
                       </a>
             
                       <a href="#" class="showcase-category">Belt</a>
             
                       <div class="price-box">
-                        <p class="price">$24.00</p>
-                        <del>$10.00</del>
+                        <p class="price">Hermes Belt?</p>
+                        <del>$1,000.00</del>
                       </div>
             
                     </div>
@@ -2193,7 +2016,7 @@ if (isset($_SESSION["user_id"])) {
 
           <div class="product-featured">
 
-            <h2 class="title">Deal of the day</h2>
+            <h2 class="title">Trader of the day</h2>
 
             <div class="showcase-wrapper has-scrollbar">
 
@@ -2220,22 +2043,22 @@ if (isset($_SESSION["user_id"])) {
                     </a>
 
                     <p class="showcase-desc">
-                      Lorem ipsum dolor sit amet consectetur Lorem ipsum
-                      dolor dolor sit amet consectetur Lorem ipsum dolor
+                      I have a collection of shampoo and conditioner, looking for other bathroom toiletries
                     </p>
 
                     <div class="price-box">
-                      <p class="price">$150.00</p>
+                      <p class="price">toiletries?</p>
 
                       <del>$200.00</del>
                     </div>
-
+                    <form action ="listing.html" method="post" nonvalidate>
                     <button class="add-cart-btn">add to cart</button>
+                  </form>
 
                     <div class="showcase-status">
                       <div class="wrapper">
                         <p>
-                          already sold: <b>20</b>
+                          already traded: <b>20</b>
                         </p>
 
                         <p>
@@ -2248,33 +2071,30 @@ if (isset($_SESSION["user_id"])) {
 
                     <div class="countdown-box">
 
-                      <p class="countdown-desc">
-                        Hurry Up! Offer ends in:
-                      </p>
-
+                    
                       <div class="countdown">
 
                         <div class="countdown-content">
 
-                          <p class="display-number">360</p>
+                          <p class="display-number"></p>
 
-                          <p class="display-text">Days</p>
+                          <p class="display-text"></p>
 
                         </div>
 
                         <div class="countdown-content">
-                          <p class="display-number">24</p>
-                          <p class="display-text">Hours</p>
+                          <p class="display-number"></p>
+                          <p class="display-text"></p>
                         </div>
 
                         <div class="countdown-content">
-                          <p class="display-number">59</p>
-                          <p class="display-text">Min</p>
+                          <p class="display-number"></p>
+                          <p class="display-text"></p>
                         </div>
 
                         <div class="countdown-content">
-                          <p class="display-number">00</p>
-                          <p class="display-text">Sec</p>
+                          <p class="display-number"></p>
+                          <p class="display-text"></p>
                         </div>
 
                       </div>
@@ -2377,7 +2197,7 @@ if (isset($_SESSION["user_id"])) {
 
           <div class="product-main">
 
-            <h2 class="title">New Products</h2>
+            <h2 class="title">Free Products</h2>
 
             <div class="product-grid">
 
@@ -2388,7 +2208,7 @@ if (isset($_SESSION["user_id"])) {
                   <img src="./assets/images/products/jacket-3.jpg" alt="Mens Winter Leathers Jackets" width="300" class="product-img default">
                   <img src="./assets/images/products/jacket-4.jpg" alt="Mens Winter Leathers Jackets" width="300" class="product-img hover">
 
-                  <p class="showcase-badge">15%</p>
+                  <p class="showcase-badge">Free</p>
 
                   <div class="showcase-actions">
 
@@ -2429,7 +2249,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
 
                   <div class="price-box">
-                    <p class="price">$48.00</p>
+                    <p class="price">Free!</p>
                     <del>$75.00</del>
                   </div>
 
@@ -2445,7 +2265,7 @@ if (isset($_SESSION["user_id"])) {
                   <img src="./assets/images/products/shirt-2.jpg" alt="Pure Garment Dyed Cotton Shirt" class="product-img hover"
                     width="300">
               
-                  <p class="showcase-badge angle black">sale</p>
+                  <p class="showcase-badge angle black">Trade Change</p>
               
                   <div class="showcase-actions">
                     <button class="btn-action">
@@ -2482,7 +2302,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$45.00</p>
+                    <p class="price">Free!</p>
                     <del>$56.00</del>
                   </div>
               
@@ -2533,7 +2353,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$58.00</p>
+                    <p class="price">Free!</p>
                     <del>$65.00</del>
                   </div>
               
@@ -2586,7 +2406,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$25.00</p>
+                    <p class="price">Free!</p>
                     <del>$35.00</del>
                   </div>
               
@@ -2637,7 +2457,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$99.00</p>
+                    <p class="price">Free!</p>
                     <del>$105.00</del>
                   </div>
               
@@ -2653,7 +2473,7 @@ if (isset($_SESSION["user_id"])) {
                   <img src="./assets/images/products/watch-4.jpg" alt="Pocket Watch Leather Pouch" class="product-img hover"
                     width="300">
               
-                  <p class="showcase-badge angle black">sale</p>
+                  <p class="showcase-badge angle black">free item</p>
               
                   <div class="showcase-actions">
                     <button class="btn-action">
@@ -2690,7 +2510,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$150.00</p>
+                    <p class="price">Free!</p>
                     <del>$170.00</del>
                   </div>
               
@@ -2740,7 +2560,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$100.00</p>
+                    <p class="price">Free!</p>
                     <del>$120.00</del>
                   </div>
               
@@ -2756,7 +2576,7 @@ if (isset($_SESSION["user_id"])) {
                   <img src="./assets/images/products/party-wear-2.jpg" alt="Womens Party Wear Shoes" class="product-img hover"
                     width="300">
               
-                  <p class="showcase-badge angle black">sale</p>
+                  <p class="showcase-badge angle black">free item</p>
               
                   <div class="showcase-actions">
                     <button class="btn-action">
@@ -2793,7 +2613,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$25.00</p>
+                    <p class="price">Free!</p>
                     <del>$30.00</del>
                   </div>
               
@@ -2844,7 +2664,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$32.00</p>
+                    <p class="price">Free</p>
                     <del>$45.00</del>
                   </div>
               
@@ -2860,7 +2680,7 @@ if (isset($_SESSION["user_id"])) {
                   <img src="./assets/images/products/sports-4.jpg" alt="Trekking & Running Shoes - black" class="product-img hover"
                     width="300">
               
-                  <p class="showcase-badge angle black">sale</p>
+                  <p class="showcase-badge angle black">free item</p>
               
                   <div class="showcase-actions">
                     <button class="btn-action">
@@ -2897,7 +2717,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$58.00</p>
+                    <p class="price">Free!</p>
                     <del>$64.00</del>
                   </div>
               
@@ -2948,7 +2768,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$50.00</p>
+                    <p class="price">Free!</p>
                     <del>$65.00</del>
                   </div>
               
@@ -2964,7 +2784,7 @@ if (isset($_SESSION["user_id"])) {
                   <img src="./assets/images/products/shorts-2.jpg" alt="Better Basics French Terry Sweatshorts"
                     class="product-img hover" width="300">
               
-                  <p class="showcase-badge angle black">sale</p>
+                  <p class="showcase-badge angle black">free item</p>
               
                   <div class="showcase-actions">
                     <button class="btn-action">
@@ -3001,7 +2821,7 @@ if (isset($_SESSION["user_id"])) {
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$78.00</p>
+                    <p class="price">Free</p>
                     <del>$85.00</del>
                   </div>
               
@@ -3045,15 +2865,14 @@ if (isset($_SESSION["user_id"])) {
 
               <img src="./assets/images/testimonial-1.jpg" alt="alan doe" class="testimonial-banner" width="80" height="80">
 
-              <p class="testimonial-name">Alan Doe</p>
+              <p class="testimonial-name">Jennie Perez</p>
 
-              <p class="testimonial-title">CEO & Founder Invision</p>
+              <p class="testimonial-title">Barter enthusiast</p>
 
               <img src="./assets/images/icons/quotes.svg" alt="quotation" class="quotation-img" width="26">
 
               <p class="testimonial-desc">
-                Lorem ipsum dolor sit amet consectetur Lorem ipsum
-                dolor dolor sit amet.
+                "BarterBetter has revolutionized how I exchange goods and services - it's a money-free, community-driven process that brings joy and meaningful change to the world."
               </p>
 
             </div>
@@ -3070,15 +2889,15 @@ if (isset($_SESSION["user_id"])) {
 
             <img src="./assets/images/cta-banner.jpg" alt="summer collection" class="cta-banner">
 
-            <a href="#" class="cta-content">
+            <a href="listing.html" class="cta-content">
 
-              <p class="discount">25% Discount</p>
+              <p class="discount">Services!</p>
 
-              <h2 class="cta-title">Summer collection</h2>
+              <h2 class="cta-title">Summer is around the corner!</h2>
 
-              <p class="cta-text">Starting @ $10</p>
+              <p class="cta-text">Look for pool cleaning, lawn services, and more</p>
 
-              <button class="cta-btn">Shop now</button>
+              <button class="cta-btn">Barter now</button>
 
             </a>
 
@@ -3104,8 +2923,8 @@ if (isset($_SESSION["user_id"])) {
 
                 <div class="service-content">
 
-                  <h3 class="service-title">Worldwide Delivery</h3>
-                  <p class="service-desc">For Order Over $100</p>
+                  <h3 class="service-title">Tracking and Delivery confirmations</h3>
+                  <p class="service-desc">know when you product will arrive</p>
 
                 </div>
 
@@ -3119,8 +2938,8 @@ if (isset($_SESSION["user_id"])) {
               
                 <div class="service-content">
               
-                  <h3 class="service-title">Next Day delivery</h3>
-                  <p class="service-desc">UK Orders Only</p>
+                  <h3 class="service-title">Escrow Services</h3>
+                  <p class="service-desc">secure transactions</p>
               
                 </div>
               
@@ -3134,8 +2953,8 @@ if (isset($_SESSION["user_id"])) {
               
                 <div class="service-content">
               
-                  <h3 class="service-title">Best Online Support</h3>
-                  <p class="service-desc">Hours: 8AM - 11PM</p>
+                  <h3 class="service-title">Online Support</h3>
+                  <p class="service-desc">we are hear for you</p>
               
                 </div>
               
@@ -3150,7 +2969,7 @@ if (isset($_SESSION["user_id"])) {
                 <div class="service-content">
               
                   <h3 class="service-title">Return Policy</h3>
-                  <p class="service-desc">Easy & Free Return</p>
+                  <p class="service-desc">easy returns</p>
               
                 </div>
               
@@ -3164,8 +2983,8 @@ if (isset($_SESSION["user_id"])) {
               
                 <div class="service-content">
               
-                  <h3 class="service-title">30% money back</h3>
-                  <p class="service-desc">For Order Over $100</p>
+                  <h3 class="service-title">Insurance coverage</h3>
+                  <p class="service-desc">insurance for the important stuff</p>
               
                 </div>
               
